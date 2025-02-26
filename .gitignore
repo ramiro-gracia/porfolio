@@ -1,0 +1,61 @@
+# Editor Config
+.vscode/
+*.code-workspace
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python virtual environments
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Compiled files
+*.class
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Logs and databases
+*.log
+db.sqlite3
+
+# IDE-specific files
+.idea/
+*.iml
+
+# Git metadata
+.git/
+
+# Ignore system swap files
+*.swp
+*.swo
+
+# Ignore package managers
+package-lock.json
+yarn.lock
+
+# Coverage reports
+coverage/
+*.cover
+
+# Temporary files
+.tmp/
+*.bak
+*.old
