@@ -232,7 +232,7 @@ header {
     color: #54d041;
 }
 
-.contact-container {
+#contact-form{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
@@ -242,12 +242,12 @@ header {
     border-width: 1px;
 }
 
-.contact-container label {
+#contact-form label {
     color: #ffffff;
     margin-bottom: 5px;
 }
 
-.contact-container input {
+#contact-form input {
     margin-bottom: 30px;
     margin-top: 10px;
     border-radius: 4px;
@@ -259,7 +259,7 @@ header {
     color: #ffffff;
 }
 
-.contact-container button {
+#contact-form button {
     margin-top: 10px;
     padding: 11px 40px;
     border-radius: 7px;
@@ -272,12 +272,12 @@ header {
     transition: .7s ease;
 }
 
-.contact-container button:hover {
+#contact-form button:hover {
     background-color: #54d041;
     color: #1a1818;
 }
 
-.contact-container .message {
+#contact-form .message {
     padding: 30px;
     color: #ffffff;
     background-color: #1a1818;
@@ -287,6 +287,11 @@ header {
     border-color: #54d041;
     border-radius: 4px;
     border-width: .2px;
+}
+
+#response {
+    color: #54d041;
+    margin-top: 30px;
 }
 
 /* FOOTER */
@@ -468,26 +473,30 @@ header {
         font-size: 35px;
     }
 
-    .contact-container {
+    #contact-form {
         padding: 40px 80px;
     }
 
-    .contact-container label {
+    #contact-form label {
         font-size: 20px;
     }
 
-    .contact-container input {
+    #contact-form input {
         width: 80%;
         font-size: 16px;
     }
 
-    .contact-container .message {
+    #contact-form .message {
         font-size: 15px;
     }
 
-    .contact-container button {
+    #contact-form button {
         padding: 15px 70px;
         font-size: 17px;
+    }
+
+    #response {
+        font-size: 18px;
     }
 
 }
