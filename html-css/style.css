@@ -4,53 +4,58 @@
     margin: 0;
     padding: 0;
     font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    scroll-behavior: smooth;
 }
 
 body {
-    height: 10000px;
-    background-color: black;
+    background-color: #202020;
 }
 
 /* HEADER */
 
 header {
-    height: 100px;
-    padding: 0 50px;
-    color: #cbd5f4;
-    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid rgba(203, 213, 244, .4)
+    position: fixed;
+    height: auto;
+    width: 100%;
+    color: #ffffff;
+    background-color: #1a1818;
+    box-shadow: 0 4px 6px rgba(84, 208, 65, .5);
+    z-index: 100;
+    padding: 10px 0;
 }
 
 .boton-cv {
     text-decoration: none;
-    color: #cbd5f4;
-    border-color: #cbd5f4;
+    color: #ffffff;
+    border-color: #202020;
     border-width: .1px;
     border-style: solid;
-    padding: 7px 15px;
+    font-weight: bold;
+    padding: 10px 15px;
     border-radius: 10px;
-    transition: .3s ease;
+    margin-left: 20px;
+    transition: .4s ease;
 }
 
 .boton-cv:hover {
-    background-color: #202020;
-    border-color: #202020;
-    color: white;
+    color: #54d041;
+    box-shadow: 0px 0px 10px rgba(85, 208, 65, .5);
 }
 
 .menu a {
-    color: #cbd5f4;
+    color: #ffffff;
     text-decoration: none;
-    padding: 0 10px;
     transition: .4s ease;
+    font-weight: 400;
 }
 
 .mostrar-menu, .esconder-menu {
     font-size: 30px;
     cursor: pointer;
+    padding: 0 20px;
     transition: .4s ease;
 }
 
@@ -62,7 +67,7 @@ header {
 .menu a:hover,
 .mostrar-menu:hover,
 .esconder-menu:hover {
-    color: white;
+    color: #54d041;
 }
 
 #check,
@@ -75,72 +80,250 @@ header {
 
 #sobre-mi {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.contenido-sobre-mi {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 45vh;
-    display: flex;
-    padding: 50px 0;
 }
 
-#sobre-mi h2 {
-    color: #cbd5f4;
-    padding: 10px 0;
-}
-
-#sobre-mi p {
-    width: 50%;
-    color: #cbd5f4;
-}
-
-.contenido-sobre-mi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45vh;
-    width: auto;
-}
-
-/*
-.contenido-sobre-mi {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 100px 30px;
-    background-color: blue;
+.contenido-sobre-mi h1 {
+    color: #54d041;
+    text-align: center;
 }
 
 .contenido-sobre-mi p {
-    color: #cbd5f4;
-    max-width: 70%;
-    padding: 0 30px;
+    padding: 15px 0;
+    text-align: center;
+    max-width: 80%;
+    color: #ffffff;
+    font-weight: 400;
 }
 
-.contenido-sobre-mi img {
-    max-width: 30%;
-    height: 50%;
-    object-fit: cover;
-    object-position: center;
+.sobre-mi-svg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 60%;
+    padding: 10px 0;
+}
+
+.sobre-mi-svg a {
+    color: #54d041;
+    border-style: solid;
+    border-width: .1px;
+    padding: 7px 10px;
+    border-radius: 20%;
+    border-color: #1a1818;
+    transition: .4s ease;
+}
+
+.sobre-mi-svg a:hover {
+    color: #ffffff;
+}
+
+/* TECH STACK */
+
+#stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+#stack h2 {
+    color: #54d041;
+    text-align: center;
+}
+
+.container-stack {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+}
+
+.container-stack h3 {
+    text-align: center;
+    color: #54d041;
+}
+
+.container-stack p {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.container-stack-skills {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border-style: solid;
+    border-color: #54d041;
+    border-width: 1px;
     border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    transition: .4s ease;
 }
-*/
 
+.container-stack-skills h3, p {
+    transition: .4s ease;
+}
 
+.container-stack-skills:hover {
+    box-shadow: 0 0 10px rgba(84, 208, 65, .5)
+}
 
-/* Me quede tratando de poner el link al cv abajo de la foto, luego chequear que este bien hecho todo el tema de los contenedores al rededor del "sobre mi" */
+.container-stack-skills:hover h3{
+    color: #ffffff;
+}
 
+.container-stack-skills:hover p {
+    color: #54d041;
+}
 
+.stack-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    transition: .4s ease;
+}
 
+/* PROJECTS */
 
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+}
 
+#projects h2 {
+    color: #54d041;
 
+}
 
+/* CONTACT */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+#contact h2 {
+    color: #54d041;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+.contact-container label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.contact-container input {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border-width: .2px;
+    background-color: #1a1818;
+    border-style: solid;
+    border-color: #54d041;
+    padding: 10px 30px;
+    color: #ffffff;
+}
+
+.contact-container button {
+    margin-top: 10px;
+    padding: 11px 40px;
+    border-radius: 7px;
+    font-weight: 500;
+    border-style: solid;
+    border-color: #54d041;
+    cursor: pointer;
+    background-color: #1a1818;
+    color: #ffffff;
+    transition: .7s ease;
+}
+
+.contact-container button:hover {
+    background-color: #54d041;
+    color: #1a1818;
+}
+
+.contact-container .message {
+    padding: 30px;
+    color: #ffffff;
+    background-color: #1a1818;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: #54d041;
+    border-radius: 4px;
+    border-width: .2px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #1a1818;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #54d041;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
 
 /* RESPONSIVE */
 
+/* TABLET Y CELULAR */
+
 @media(max-width: 768px) {
     /* HEADER */
+
     .mostrar-menu,
     .esconder-menu {
         display: block;
@@ -150,7 +333,7 @@ header {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: black;
+        background-color: #1a1818;
         right: -100%;
         top: 0;
         text-align: center;
@@ -178,4 +361,133 @@ header {
     #check:checked ~ .menu {
         right: 0;
     }
+}
+
+@media(min-width: 769px) and (max-width: 1024px) {
+
+    .boton-cv {
+        margin-left: 50px;
+    }
+
+    .menu a{
+        padding: 0 15px;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    .contenido-sobre-mi h1{
+        font-size: 40px;
+    }
+
+    .contenido-sobre-mi p {
+        font-size: 20px;
+    }
+
+    #stack h2 {
+        font-size: 30px;
+    }
+
+    .container-stack h3 {
+        font-size: 15px;
+    }
+
+    .container-stack p {
+        font-size: 15px;
+    }
+
+    .projects-container h2 {
+        font-size: 35px;
+    }
+
+    .container-stack-skills {
+        transition: .5s ease;
+    }
+
+    #projects h2 {
+        font-size: 30px;
+    }
+
+    #contact h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media(min-width: 500px) and (max-width: 1920px) {
+    .sobre-mi-svg {
+        min-width: 30%;
+        max-width: 40%;
+    }
+}
+
+@media(min-width: 1025px) and (max-width: 1920px) {
+    
+    .boton-cv {
+        margin-left: 80px;
+    }
+
+    .menu a{
+        padding: 0 15px;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+
+    .contenido-sobre-mi h1{
+        font-size: 50px;
+    }
+
+    .contenido-sobre-mi p {
+        font-size: 23px;
+    }
+
+    #stack h2{
+        font-size: 35px;
+    }
+
+    .container-stack h3 {
+        font-size: 20px;
+    }
+
+    .container-stack p {
+        font-size: 20px;
+    }
+
+    .projects-container h2 {
+        font-size: 35px;
+    }
+
+    .container-stack-skills {
+        transition: .5s ease;
+    }
+
+    .container-stack-skills:hover {
+        transform: scale(1.2);
+    }
+
+    #contact h2 {
+        font-size: 35px;
+    }
+
+    .contact-container {
+        padding: 40px 80px;
+    }
+
+    .contact-container label {
+        font-size: 20px;
+    }
+
+    .contact-container input {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .contact-container .message {
+        font-size: 15px;
+    }
+
+    .contact-container button {
+        padding: 15px 70px;
+        font-size: 17px;
+    }
+
 }
