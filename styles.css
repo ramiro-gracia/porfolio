@@ -296,7 +296,7 @@
   
   .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 10px 30px rgba(255, 133, 0, 0.8);
   }
   
   .skill-card h3 {
@@ -342,6 +342,7 @@
   .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
+    box-shadow: 0 10px 40px rgba(255, 133, 0, 0.8);
   }
   
   .project-image {
